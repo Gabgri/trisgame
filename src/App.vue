@@ -1,7 +1,9 @@
 <template>
   <h1 class="text-3xl font-bold">TrisGame</h1>
-  <button v-show="!isStarted" @click="startGame">Start Your Game!</button>
-  <button v-show="isStarted">Reset</button>
+  <button class="bg-slate-200 text-gray-800 font-bold rounded border-b-2 border-blue-500 hover:border-blue-600 hover:bg-blue-500 hover:text-white shadow-md py-2 px-6 inline-flex items-center"
+  v-show="!isStarted" @click="startGame">Start Your Game!</button>
+  <button class="bg-slate-200 text-gray-800 font-bold rounded border-b-2 border-blue-500 hover:border-blue-600 hover:bg-blue-500 hover:text-white shadow-md py-2 px-6 inline-flex items-center"
+  v-show="isStarted">Reset</button>
   <p>{{ input }} has won the Game</p>
   <Grid v-if="isStarted" />
 </template>
@@ -16,14 +18,3 @@ import { ref } from "vue";
   }
 
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
