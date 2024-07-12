@@ -24,9 +24,6 @@
     </div>
 </template>
 
-<script>
+<script setup>
 import Box from './Box.vue';
-export default { 
-    components: { Box }
-}
 </script>
