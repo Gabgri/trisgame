@@ -1,20 +1,20 @@
 <template>
 <span @click="handler">{{ output }}</span> 
+<!-- @click="handler" -->
 </template>
 
 <script setup>
 import { ref } from "vue";
-  let input = false;
-  const output = ref('-');
 
-  function handler() {
-    console.log("clicked");
-    if (input) {
-      output.value = "X";
+const props = defineProps(['trueOrfalse'])
+const output = ref('');
+
+function handler() {
+    if (props.trueOrfalse) {
+        output.value = 'X';
     } else {
-      output.value = "O";
+        output.value = 'O';
     }
-    input = !input;
-    console.log(input);
-  }
+}
+
 </script>
