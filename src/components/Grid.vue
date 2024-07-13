@@ -1,54 +1,35 @@
 <template>
     <!--Grid-->
-    <div class="mx-auto mt-10 max-w-md"> 
+    <div id="grid" class="mx-auto mt-10 max-w-md"> 
         <!--Rows-->
         <div class="grid grid-cols-3"> 
-            <div>{{ input }}</div>
-            <div class="border-x-2 border-gray-700">
-                {{ input }}</div>
-            <img src="../assets/oTris.svg" alt="logo">
-            <!-- <div>{{ input }}</div> -->
+            <Box />
+            <Box class="border-x-2 border-gray-700" />
+            <Box />
         </div>
         <div class="grid grid-cols-3"> 
-            <div class="border-y-2 border-gray-700">
-                {{ input }}</div>
-            <div class="border-2 border-gray-700">
-                {{ input }}</div>
-            <div class="border-y-2 border-gray-700">
-                <img src="../assets/oTris.svg" alt="logo"></div>
+            <Box class="border-y-2 border-gray-700"/>
+            <Box class="border-2 border-gray-700"/>
+            <Box class="border-y-2 border-gray-700"/>
         </div>
         <div class="grid grid-cols-3"> 
-            <div>{{ input }}</div>
-            <div class="border-x-2 border-gray-700">
-                {{ input }}</div>
-            <!-- <div>{{ input }}</div> -->
-            <img src="../assets/oTris.svg" alt="logo">
+            <Box />
+            <Box class="border-x-2 border-gray-700"/>
+            <Box />
         </div>
     </div>
 
-
-    <!-- <div class="mx-10 mt-20 "> 
-
-        <div class="flex justify-center"> 
-            <div>{{ input }}</div>
-            <div class="border-x-2 border-gray-700"><p>Riga 1</p></div>
-            <div><p>Riga 1</p></div>
-        </div>
-        <div class="flex justify-center"> 
-            <div class="border-y-2 border-gray-700"><p>Riga 2</p></div>
-            <div class="border-2 border-gray-700"><p>Riga 2</p></div>
-            <div class="border-y-2 border-gray-700"><p>Riga 2</p></div>
-        </div>
-        <div class="flex justify-center"> 
-            <div><p>Riga 3</p></div>
-            <div class="border-x-2 border-gray-700"><p>Riga 3</p></div>
-            <div><p>Riga 3</p></div>
-        </div>
-    </div>  -->
+    <Box />
 </template>
 
 <script setup>
-  const input = false;
-  const output = 'x';
+import Box from "./Box.vue";
+
 
 </script>
+
+<!--
+Orizzontali: [1, 2, 3], [4, 5, 6], [7, 8, 9]
+Verticali: [1, 4, 7], [2, 5, 8], [3, 6, 9]
+Diagonali: [1, 5, 9], [3, 5, 7]
+-->
