@@ -1,14 +1,14 @@
 <template>
-    <!--Grid-->
+    <!--Grid  max-w-md-->
     <div @click="handler" id="grid" class="mx-auto mt-10 max-w-md"> 
         <!--Rows-->
-        <div class="grid grid-cols-3 h-28"> 
+        <div class="grid grid-cols-3 h-36"> 
             <Box :trueOrfalse="state"/>
             <Box :trueOrfalse="state"
-            class="border-x-2 border-gray-700" />
+            class="border-x-2 border-gray-700"/>
             <Box :trueOrfalse="state"/>
         </div>
-        <div class="grid grid-cols-3 h-28"> 
+        <div class="grid grid-cols-3 h-36"> 
             <Box :trueOrfalse="state"
             class="border-y-2 border-gray-700"/>
             <Box :trueOrfalse="state"
@@ -16,7 +16,7 @@
             <Box :trueOrfalse="state"
             class="border-y-2 border-gray-700"/>
         </div>
-        <div class="grid grid-cols-3 h-28"> 
+        <div class="grid grid-cols-3 h-36"> 
             <Box :trueOrfalse="state"/>
             <Box :trueOrfalse="state"
             class="border-x-2 border-gray-700"/>
@@ -35,26 +35,6 @@ function handler() {
   state.value = !state.value;
   console.log(state.value);
 }
-// function handler() {
-//   clicked.value = !clicked.value;
-//   console.log(clicked.value);
-
-//   if (clicked.value) {
-//     out.value = "X";
-//   } else {
-//     out.value = "O";
-//   }
-// }
-
-
-//   function handler() {
-//     if (input) {
-//       output.value = "X";
-//     } else {
-//       output.value = "O";
-//     }
-//     input = !input;
-//   }
 </script>
 
 <!--

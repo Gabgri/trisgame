@@ -1,5 +1,7 @@
 <template>
-<span @click="handler">{{ output }}</span> 
+<span @click="handler"
+class="content-center"
+>{{ output }}</span> 
 <!-- @click="handler" -->
 </template>
 
