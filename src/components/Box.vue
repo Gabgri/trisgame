@@ -2,7 +2,7 @@
 <span @click="handler"
 class="content-center"
 >{{ output }}</span> 
-<!-- @click="handler" -->
+
 </template>
 
 <script setup>
