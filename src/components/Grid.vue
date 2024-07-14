@@ -1,6 +1,6 @@
 <template>
     <!--Grid-->
-    <div @click="handler" id="grid" class="grid grid-cols-3"> 
+    <div @click="handler" id="grid" class="grid grid-cols-3 sm:max-w-md md:max-w-lg lg:max-w-xl h-96"> 
 
         <!--Rows-->
         <Box :trueOrfalse="state"/>
