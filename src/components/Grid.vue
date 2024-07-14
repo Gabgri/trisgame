@@ -1,27 +1,25 @@
 <template>
-    <!--Grid  max-w-md-->
-    <div @click="handler" id="grid" class="mx-auto mt-10 max-w-md"> 
+    <!--Grid-->
+    <div @click="handler" id="grid" class="grid grid-cols-3"> 
+
         <!--Rows-->
-        <div class="grid grid-cols-3 h-36"> 
-            <Box :trueOrfalse="state"/>
-            <Box :trueOrfalse="state"
-            class="border-x-2 border-gray-700"/>
-            <Box :trueOrfalse="state"/>
-        </div>
-        <div class="grid grid-cols-3 h-36"> 
-            <Box :trueOrfalse="state"
-            class="border-y-2 border-gray-700"/>
-            <Box :trueOrfalse="state"
-            class="border-2 border-gray-700"/>
-            <Box :trueOrfalse="state"
-            class="border-y-2 border-gray-700"/>
-        </div>
-        <div class="grid grid-cols-3 h-36"> 
-            <Box :trueOrfalse="state"/>
-            <Box :trueOrfalse="state"
-            class="border-x-2 border-gray-700"/>
-            <Box :trueOrfalse="state"/>
-        </div>
+        <Box :trueOrfalse="state"/>
+        <Box :trueOrfalse="state"
+        class="border-x-2 border-gray-700"/>
+        <Box :trueOrfalse="state"/>
+
+        <Box :trueOrfalse="state"
+        class="border-y-2 border-gray-700"/>
+        <Box :trueOrfalse="state"
+        class="border-2 border-gray-700"/>
+        <Box :trueOrfalse="state"
+        class="border-y-2 border-gray-700"/>
+
+        <Box :trueOrfalse="state"/>
+        <Box :trueOrfalse="state"
+        class="border-x-2 border-gray-700"/>
+        <Box :trueOrfalse="state"/>
+
     </div>
 </template>
 
@@ -33,7 +31,6 @@ const state = ref(false);
 
 function handler() {
   state.value = !state.value;
-  console.log(state.value);
 }
 </script>
 

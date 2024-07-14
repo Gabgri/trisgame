@@ -9,7 +9,7 @@ class="content-center"
 import { ref } from "vue";
 
 const props = defineProps(['trueOrfalse'])
-const output = ref('');
+const output = ref('-');
 
 function handler() {
     if (props.trueOrfalse) {
