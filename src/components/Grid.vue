@@ -1,21 +1,21 @@
 <template>
     <!--Grid-->
-    <div @click="handler" id="grid" class="grid grid-cols-3 sm:max-w-md md:max-w-lg lg:max-w-xl h-96"> 
+    <div @click="handler" id="grid" class="grid grid-cols-3 sm:max-w-md md:max-w-lg lg:max-w-xl"> 
 
         <!--Rows-->
-        <Box :trueOrfalse="state"/>
+        <Box :trueOrfalse="state" class="h-32"/>
         <Box :trueOrfalse="state"
         class="border-x-2 border-gray-700"/>
         <Box :trueOrfalse="state"/>
 
-        <Box :trueOrfalse="state"
-        class="border-y-2 border-gray-700"/>
+        <Box :trueOrfalse="state" 
+        class="border-y-2 border-gray-700 h-32"/>
         <Box :trueOrfalse="state"
         class="border-2 border-gray-700"/>
         <Box :trueOrfalse="state"
         class="border-y-2 border-gray-700"/>
 
-        <Box :trueOrfalse="state"/>
+        <Box :trueOrfalse="state" class="h-32"/>
         <Box :trueOrfalse="state"
         class="border-x-2 border-gray-700"/>
         <Box :trueOrfalse="state"/>
