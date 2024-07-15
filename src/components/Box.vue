@@ -1,5 +1,5 @@
 <template>
-<span @click="handler"
+<span @click.once="handler"
 class="content-center"
 >{{ output }}</span> 
 
@@ -8,7 +8,7 @@ class="content-center"
 <script setup>
 import { ref } from "vue";
 
-const props = defineProps(['trueOrfalse'])
+const props = defineProps(['trueOrfalse']);
 const output = ref('');
 
 function handler() {
