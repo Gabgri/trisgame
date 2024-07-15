@@ -25,7 +25,7 @@ const style = reactive({
 function getStyle(i) {
   if (i == 2) {
     return style.sideX;
-  } else if (i === 4 | i == 6) {
+  } else if (i == 4 | i == 6) {
     return style.sideY;
   } else if (i == 5) {
     return style.bothSide;
