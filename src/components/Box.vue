@@ -1,7 +1,6 @@
 <template>
 <span @click.once="handler"
-class="content-center"
->{{ output }}</span> 
+class="content-center">{{ output }}</span> 
 
 </template>
 
@@ -18,5 +17,4 @@ function handler() {
         output.value = 'O';
     }
 }
-
 </script>
