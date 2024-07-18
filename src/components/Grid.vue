@@ -35,6 +35,7 @@ function getStyle(i) {
 }
 
 function handler() {
+  console.log(state.value);
   state.value = !state.value;
 }
 </script>
