@@ -11,9 +11,7 @@
     Reset</button>
   </div>
 
-  <Grid v-if="isStarted" class="mx-auto"/>
-
-  <p>Has won</p>
+  <Grid v-if="isStarted"/>
 </template>
 
 <script setup>

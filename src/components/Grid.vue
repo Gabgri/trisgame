@@ -1,14 +1,19 @@
 <template>
-
     <!--Grid-->
     <div id="grid" class="grid grid-cols-3 sm:max-w-md md:max-w-lg lg:max-w-xl"> 
 
         <!--Rows-->
-        <Box v-for="i in 9" :key="i" 
-        @click.once="handler(i)"
+        <Box v-show="!result"
+        v-for="i in 9" :key="i" 
         :trueOrfalse="state" 
+        @click.once="handler(i)"
         class="h-32" :class="getStyle(i)"/>
     </div>
+
+    <p v-if="result" class="text-3xl">
+      Game Over! <br/>
+      {{ winner }}
+    </p>
 
 </template>
 
@@ -17,6 +22,8 @@ import Box from "./Box.vue";
 import { reactive, ref } from "vue";
 
 const state = ref(true);
+const result = ref(false);
+const winner = ref('');
 
 const style = reactive({
   sideX: 'border-x-2 border-gray-700',
@@ -50,13 +57,19 @@ function getWinner() {
     let combination = combinations[a];
     if (clickedX.includes(combination[0]) && clickedX.includes(combination[1]) && clickedX.includes(combination[2])) {
       alert("X won!");
+      result.value = true;
+      winner.value = 'X won';
     } else if (clickedO.includes(combination[0]) && clickedO.includes(combination[1]) && clickedO.includes(combination[2])) {
       alert("O won!");
+      result.value = true;
+      winner.value = 'O won';
     }
-    }
+  }
 
-  if (clickedX.length + clickedO.length == 9) {
+  if (clickedX.length + clickedO.length == 9 && !result.value) {
     alert("Draw!");
+    result.value = true;
+    winner.value = 'Draw';
   }
 }
 
@@ -68,11 +81,10 @@ function handler(i) {
     clickedO.push(i);
   }
 
-  state.value = !state.value;
-
   if (clickedX.length > 2) {
     getWinner();
   }
+  state.value = !state.value;
 }
 
 </script>
