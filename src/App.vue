@@ -12,6 +12,8 @@
   </div>
 
   <Grid v-if="isStarted" class="mx-auto"/>
+
+  <p>Has won</p>
 </template>
 
 <script setup>
