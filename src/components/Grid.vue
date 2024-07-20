@@ -21,9 +21,9 @@
 import Box from "./Box.vue";
 import { reactive, ref } from "vue";
 
-const state = ref(true);
-const result = ref(false);
-const winner = ref('');
+const state = ref(true); // true = X, false = O (used to switch turns and props)
+const result = ref(false); // true when winner or draw
+const winner = ref(''); //return "X won" or "O won" or "Draw"
 
 const style = reactive({
   sideX: 'border-x-2 border-gray-700',
@@ -56,20 +56,20 @@ function getWinner() {
   for (let a = 0; a < combinations.length; a++) {
     let combination = combinations[a];
     if (clickedX.includes(combination[0]) && clickedX.includes(combination[1]) && clickedX.includes(combination[2])) {
-      alert("X won!");
       result.value = true;
       winner.value = 'X won';
+      alert("X won!");
     } else if (clickedO.includes(combination[0]) && clickedO.includes(combination[1]) && clickedO.includes(combination[2])) {
-      alert("O won!");
       result.value = true;
       winner.value = 'O won';
+      alert("O won!");
     }
   }
 
   if (clickedX.length + clickedO.length == 9 && !result.value) {
-    alert("Draw!");
-    result.value = true;
+    result.value = true; // check if all boxes are clicked
     winner.value = 'Draw';
+    alert("Draw!");
   }
 }
 
@@ -81,10 +81,13 @@ function handler(i) {
     clickedO.push(i);
   }
 
-  if (clickedX.length > 2) {
-    getWinner();
-  }
   state.value = !state.value;
+
+  if (clickedX.length > 2) {
+    setTimeout(() => {
+      getWinner();
+    }, 100); 
+  }
 }
 
 </script>
