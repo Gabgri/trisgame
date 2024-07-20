@@ -1,6 +1,6 @@
 <template>
     <!--Grid-->
-    <div id="grid" class="grid grid-cols-3 sm:max-w-md md:max-w-lg lg:max-w-xl"> 
+    <div id="grid" class="grid grid-cols-3 mx-auto sm:max-w-md md:max-w-lg lg:max-w-xl"> 
 
         <!--Rows-->
         <Box v-show="!result"
