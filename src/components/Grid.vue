@@ -31,7 +31,7 @@ const style = reactive({
   bothSide: 'border-2 border-gray-700'
 })
 
-function getStyle(i) {
+const getStyle = (i) => {
   if (i == 2) {
     return style.sideX;
   } else if (i == 4 | i == 6) {
@@ -52,28 +52,28 @@ const combinations = [ [0, 0, 0],
 let clickedX = []; // place clicked X
 let clickedO = []; // place clicked O
 
-function getWinner() {
+const getWinner = () => {
   for (let a = 0; a < combinations.length; a++) {
     let combination = combinations[a];
     if (clickedX.includes(combination[0]) && clickedX.includes(combination[1]) && clickedX.includes(combination[2])) {
       result.value = true;
       winner.value = 'X won';
-      alert("X won!");
+      // alert("X won!");
     } else if (clickedO.includes(combination[0]) && clickedO.includes(combination[1]) && clickedO.includes(combination[2])) {
       result.value = true;
       winner.value = 'O won';
-      alert("O won!");
+      // alert("O won!");
     }
   }
 
   if (clickedX.length + clickedO.length == 9 && !result.value) {
     result.value = true; // check if all boxes are clicked
     winner.value = 'Draw';
-    alert("Draw!");
+    // alert("Draw!");
   }
 }
 
-function handler(i) {
+const handler = (i) =>{
   if (state.value) {
     clickedX.push(i);
   }
@@ -86,7 +86,7 @@ function handler(i) {
   if (clickedX.length > 2) {
     setTimeout(() => {
       getWinner();
-    }, 100); 
+    }, 400); 
   }
 }
 

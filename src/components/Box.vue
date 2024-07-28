@@ -10,7 +10,7 @@ import { ref } from "vue";
 const props = defineProps(['trueOrfalse']);
 const output = ref('');
 
-function handler() {
+const handler = () => {
     if (props.trueOrfalse) {
         output.value = 'X';
     } else {
